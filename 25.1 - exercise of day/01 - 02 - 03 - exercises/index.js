@@ -6,7 +6,8 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
-const message = "Está vivo!!!";
+//2- Modifique o código da sua API para que ela responda na rota get / com o mesmo texto contido na variável criada no passo anterior.
+const message = process.env.NEW_TEXT || "Está vivo!!!";
 
 app.get('/', (_req, res) => {
   return res.send(message);
